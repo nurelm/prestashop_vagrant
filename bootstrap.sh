@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## Change this to the name you'd like for your new Spree folder
-PS_FOLDER=prestashop
+PS_VERSION=prestashop_1.5.6.2.zip
 
 ## Setup and basic tools
 sudo apt-get update && sudo apt-get upgrade -y
@@ -21,12 +21,10 @@ sudo apt-get install -y phpmyadmin
 sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
 
 ## Download Prestashop
-cd /tmp
-wget http://www.prestashop.com/download/old/prestashop_1.6.0.8.zip
-unzip prestashop_1.6.0.8.zip
-sudo rm -rf /vagrant/prestashop-old
-sudo mv /vagrant/prestashop /vagrant/prestashop-old
-sudo mv ./prestashop /vagrant
+cd /vagrant
+wget http://www.prestashop.com/download/old/$PS_VERSION
+unzip -o $PS_VERSION
+sudo rm ./$PS_VERSION
 
 ## Create a database
 mysql -uroot -pabc123 -e 'create database prestashop'
