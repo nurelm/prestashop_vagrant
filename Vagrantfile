@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   # config.vm.box_url = "http://domain.com/path/to/above.box"
-  
+
   # Chef or Puppet would be classier, but sometimes a shell script does the trick:
   config.vm.provision :shell, path: "bootstrap.sh"
 
@@ -46,7 +46,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
-    mount_options: ["dmode=775,fmode=664"]
+    mount_options: ["dmode=775,fmode=664"],
+    create: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
