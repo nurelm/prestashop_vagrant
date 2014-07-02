@@ -19,14 +19,17 @@ sudo apt-get install -y php5 libapache2-mod-php5 php5-mcrypt
 ## phpMyAdmin
 sudo apt-get install -y phpmyadmin
 sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
-sudo apachectl -k restart
 
 ## Download Prestashop
 cd /tmp
 wget http://www.prestashop.com/download/old/prestashop_1.6.0.8.zip
 unzip prestashop_1.6.0.8.zip
-sudo mv ./prestashop /var/www
-sudo chown -R www-data /var/www/prestashop
+sudo rm -rf /vagrant/prestashop-old
+sudo mv /vagrant/prestashop /vagrant/prestashop-old
+sudo mv ./prestashop /vagrant
 
 ## Create a database
 mysql -uroot -pabc123 -e 'create database prestashop'
+
+## Restart Apache to get config changes
+sudo apachectl -k restart

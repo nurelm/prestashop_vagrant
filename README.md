@@ -35,16 +35,19 @@ When that's all done, got to [this page](http://localhost:8081/prestashop) and g
 
 Once you're done, it'll ask you to remove the install folder.  Do do that, SSH into your vagrant and remove that folder:
 
-    vagrant ssh
-    rm -rf /var/www/prestashop/install
+    rm -rf [my vagrant folder]/prestashop/install
 
-## Coming Soon ...
-We'll put PrestaShop in a directory that's accessible to your host OS so you can hack on it.
+## Basic Usage
+Just fire up the browser of your choice and take a peek at http://localhost:8081/prestashop. If you want to check out the database, we installed phpMyAdmin, too, so just hit http://localhost:8081/phpmyadmin and use the same root/abc123 to log in.
+
+## Development
+Back in your host operating system, notice that there is a new directory in the same directory as this README file called "prestashop".  This is the very same directory that your new vagrant sees, and any edits made from either within the vagrant or from your host operating system will be seen in both places. This means you can edit using any tools in your host OS that you please!
+
+It's easy to tinker with exactly what gets installed, just edit the bootstrap.sh file.
 
 ## Further Documentation
-- https://github.com/spree/spree
 - http://docs.vagrantup.com/v2/getting-started/index.html
 - https://www.virtualbox.org/wiki/End-user_documentation
 
 ## Credits
-Tweet a shout out @nurelm to your friendly PrestaShop partners at [NuRelm](http://www.nurelm.com) if this helped you out.
+Tweet a shout out @nurelm to your friendly Prestashop partners at [NuRelm](http://www.nurelm.com) if this helped you out.
