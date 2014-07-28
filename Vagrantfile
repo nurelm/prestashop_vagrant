@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "chef/ubuntu-13.04"
+  config.vm.box = "chef/ubuntu-13.10"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -43,6 +43,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "./prestashop", "/var/www/prestashop",
+    id: "vagrant-root",
+    owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"],
+    create: true
+  config.vm.synced_folder "../prestashop-shoppinpal",
+    "/var/www/prestashop/modules/shoppinpal",
     id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
