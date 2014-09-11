@@ -31,7 +31,7 @@ Now fire up the vagrant. The next two words will start up the box you just downl
 
 You may want to go have some coffee or maybe take a shower, as this will take a few minutes while it's loading and installing various packages.
 
-When that's all done, got to [this page](http://localhost:8081/prestashop) and go through the setup. You'll eventually be asked for the database name, user and password.  The database is 'prestashop', user is 'root' and password is 'abc123'.
+When that's all done, got to [this page](http://localhost:8081/prestashop/install) and go through the setup. You'll eventually be asked for the database name, user and password.  The database is 'prestashop', user is 'root' and password is 'abc123'.
 
 Once you're done, it'll ask you to remove the install folder.  Do do that, SSH into your vagrant and remove that folder:
 
