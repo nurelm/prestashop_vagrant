@@ -31,7 +31,7 @@ Now fire up the vagrant. The next two words will start up the box you just downl
 
 You may want to go have some coffee or maybe take a shower, as this will take a few minutes while it's loading and installing various packages.
 
-When that's all done, got to [this page](http://localhost:8081/prestashop) and go through the setup. You'll eventually be asked for the database name, user and password.  The database is 'prestashop', user is 'root' and password is 'abc123'.
+When that's all done, got to [this page](http://localhost:8081/prestashop/install) and go through the setup. You'll eventually be asked for the database name, user and password.  The database is 'prestashop', user is 'root' and password is 'abc123'.
 
 Once you're done, it'll ask you to remove the install folder.  Do do that, SSH into your vagrant and remove that folder:
 
@@ -39,6 +39,9 @@ Once you're done, it'll ask you to remove the install folder.  Do do that, SSH i
 
 ## Basic Usage
 Just fire up the browser of your choice and take a peek at http://localhost:8081/prestashop. If you want to check out the database, we installed phpMyAdmin, too, so just hit http://localhost:8081/phpmyadmin and use the same root/abc123 to log in.
+
+## Advanced Usage
+To expose your local prestashop to the internet, you can use ngrok.com where signing up is free and gets you access to custom subdomains. So you can run something like `./ngrok -subdomain psMyFirstName 8081` after `vagrant up` which will tunnel and connect your local server to the internet. This means it will let your teammates reach your server publically at http://psMyFirstName.ngrok.com/prestashop
 
 ## Development
 Back in your host operating system, notice that there is a new directory in the same directory as this README file called "prestashop".  This is the very same directory that your new vagrant sees, and any edits made from either within the vagrant or from your host operating system will be seen in both places. This means you can edit using any tools in your host OS that you please!
