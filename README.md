@@ -21,7 +21,7 @@ Then open up a terminal window and `cd` into the directory containing this READM
 
     cd directory_containing_vagrantfile
 
-Now grab copy of the Vagrant box that we'll use.  You'll only have to do this once, and it will grab an image of Ubuntu 13.04 for you to use anytime it pleases you. It will ask you what environment you're using, pick the option for VirtualBox.
+Now grab copy of the Vagrant box that we'll use.  You'll only have to do this once, and it will grab an image of Ubuntu 14.04 for you to use anytime it pleases you. It will ask you what environment you're using, pick the option for VirtualBox.
 
     vagrant box add chef/ubuntu-13.04
 
