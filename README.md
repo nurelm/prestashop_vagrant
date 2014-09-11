@@ -23,7 +23,7 @@ Then open up a terminal window and `cd` into the directory containing this READM
 
 Now grab copy of the Vagrant box that we'll use.  You'll only have to do this once, and it will grab an image of Ubuntu 14.04 for you to use anytime it pleases you. It will ask you what environment you're using, pick the option for VirtualBox.
 
-    vagrant box add chef/ubuntu-13.04
+    vagrant box add chef/ubuntu-14.04
 
 Now fire up the vagrant. The next two words will start up the box you just downloaded and run the commands in bootstrap.sh within that box, which will grab and setup everything you need to run PrestaShop on that vagrant:
 
