@@ -18,7 +18,9 @@ sudo apt-get install -y php5 php5-mcrypt
 
 ## phpMyAdmin
 sudo apt-get install -y phpmyadmin
-sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
+sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin 
+sudo service apache2 reload
 
 ## Download Prestashop
 cd /vagrant
