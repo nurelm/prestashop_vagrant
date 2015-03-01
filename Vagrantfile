@@ -46,7 +46,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "./prestashop", "/var/www/html/prestashop",
-    id: "vagrant-root",
+    owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"],
+    create: true
+  config.vm.synced_folder "../prestashop-avalaratax", "/var/www/html/prestashop/modules/avalaratax",
     owner: "vagrant",
     group: "www-data",
     mount_options: ["dmode=775,fmode=664"],
