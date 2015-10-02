@@ -35,7 +35,8 @@ When that's all done, got to [this page](http://localhost:8081/prestashop/instal
 
 Once you're done, it'll ask you to remove the install folder.  Do do that, SSH into your vagrant and remove that folder:
 
-    rm -rf [my vagrant folder]/prestashop/install
+    vagrant ssh
+    rm -rf /var/www/html/prestashop/install/
 
 ## Basic Usage
 Just fire up the browser of your choice and take a peek at http://localhost:8081/prestashop. If you want to check out the database, we installed phpMyAdmin, too, so just hit http://localhost:8081/phpmyadmin and use the same root/abc123 to log in.
