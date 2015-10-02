@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-## Change this to the name you'd like for your new Spree folder
-PS_VERSION=prestashop_1.5.6.2.zip
+## Change this to the PS version you'd like to use
+PS_VERSION=prestashop_1.6.1.1.zip
 
 ## Setup and basic tools
 sudo apt-get update && sudo apt-get upgrade -y
