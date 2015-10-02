@@ -23,7 +23,7 @@ Then open up a terminal window and `cd` into the directory containing this READM
 
 Now grab copy of the Vagrant box that we'll use.  You'll only have to do this once, and it will grab an image of Ubuntu 14.04 for you to use anytime it pleases you. It will ask you what environment you're using, pick the option for VirtualBox.
 
-    vagrant box add chef/ubuntu-14.04
+    vagrant box add bento/ubuntu-14.04
 
 Now fire up the vagrant. The next two words will start up the box you just downloaded and run the commands in bootstrap.sh within that box, which will grab and setup everything you need to run PrestaShop on that vagrant:
 
@@ -35,7 +35,8 @@ When that's all done, got to [this page](http://localhost:8081/prestashop/instal
 
 Once you're done, it'll ask you to remove the install folder.  Do do that, SSH into your vagrant and remove that folder:
 
-    rm -rf [my vagrant folder]/prestashop/install
+    vagrant ssh
+    rm -rf /var/www/html/prestashop/install/
 
 ## Basic Usage
 Just fire up the browser of your choice and take a peek at http://localhost:8081/prestashop. If you want to check out the database, we installed phpMyAdmin, too, so just hit http://localhost:8081/phpmyadmin and use the same root/abc123 to log in.
