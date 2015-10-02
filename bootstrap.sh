@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## Change this to the PS version you'd like to use
-PS_VERSION=prestashop_1.6.0.8.zip
+PS_VERSION=prestashop_1.6.1.1.zip
 
 ## Setup and basic tools
 sudo apt-get update && sudo apt-get upgrade -y
