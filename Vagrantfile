@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "bento/ubuntu-14.04"
+  config.vm.box = "ubuntu/precise64"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
